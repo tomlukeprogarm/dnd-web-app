@@ -13,7 +13,7 @@ const Notes = () => {
 
   const addNote = () => {
     const newNote = {
-      id: new Date().getTime(), 
+      id: new Date().getTime(),
       content: '',
     };
     setNotes([...notes, newNote]);

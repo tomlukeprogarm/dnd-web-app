@@ -18,10 +18,10 @@ const Dashboard = () => {
             <Link to="/dice-roller">DICE ROLLER</Link>
             <Link to="/profile">PROFILE</Link>
           </nav>
-          
+
           <main className='main-content'>
           <h2 className="dash-title">YOUR DND HELPER</h2>
-          
+    
        
         <Routes>
           <Route path="/" element={<></>} />

@@ -30,6 +30,11 @@ const Campaigns = () => {
     setFolders([...folders, newFolder]);
   };
 
+  const handleDeleteCampaign = (id) => {
+    const updatedFolders = folders.filter((folder) => folder.id !== id);
+    setFolders(updatedFolders);
+  };
+
   return (
     <div>
       <h2>Campaigns</h2>
@@ -58,6 +63,10 @@ const Campaigns = () => {
                 <li key={index}>{file.name}</li>
               ))}
             </ul>
+            {/* Delete campaign button */}
+            <button onClick={() => handleDeleteCampaign(folder.id)}>
+              Delete Campaign
+            </button>
           </div>
         ))}
       </div>
