@@ -1,0 +1,81 @@
+
+
+.character-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.character-label {
+
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-weight: bold;
+}
+
+.character-span {
+  flex: 1;
+  padding-right: 10px;
+}
+
+.character-input {
+  flex: 3;
+  padding: 5px;
+  color: #282828;
+}
+
+.character-button {
+  padding: 8px 15px;
+  background-color: #250d08;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 50%; 
+}
+
+.character-sheet {
+  width: 50%;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #8a8a8a;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.character-sheet table {
+  width: 50%; 
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+.character-sheet th,
+.character-sheet td {
+  border: 1px solid #ffffff;
+  padding: 5px; 
+  text-align: left;
+}
+
+.character-sheet th {
+  background-color: #282828;
+
+}
+
+.character-sheet button {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 5px 10px; 
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.character-sheet button:hover {
+  background-color: #cc0000;
+}
+
+button{
+  background-color: #282828;
+}

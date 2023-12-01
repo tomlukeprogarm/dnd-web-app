@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import './styles/profile.css'
+
 
 const Profile = () => {
   const [username, setUsername] = useState('');
@@ -32,9 +34,9 @@ const Profile = () => {
   };
 
   return (
-    <div>
-      <h2>Profile</h2>
-      <form>
+    <div className="container">
+
+      <form className="profile-form">
         <label>
           Username:
           <input

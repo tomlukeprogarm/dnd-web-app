@@ -1,34 +1,40 @@
-/* Parent container */
+*{
+  font-family: monospace;
+  color: white;
+}
 .dash-grid {
   display: flex;
-  flex-direction: row; /* Arrange items horizontally */
+  flex-direction: row;
 }
 
-/* Nested container for vertical arrangement */
+
 .main-content {
   display: flex;
-  flex-direction: column; /* Arrange items vertically */
-  padding: 20px; /* Adjust padding as needed */
+  flex-direction: column; 
+  padding: 20px;
 }
 
-/* Header */
 .dash-title {
-  background-color: aliceblue;
+  background-color: rgb(42, 4, 4);
   margin: 0;
   padding: 30px;
   width: 100vw;
 }
 
 .dash-nav {
-  background-color: gray;
+  background-color: rgb(0, 0, 0);
   color: white;
   padding: 30px;
   display: flex;
-  flex-direction: column; /* Arrange items vertically */
+  flex-direction: column; 
   gap: 40px;
   text-decoration: none;
   list-style: none;
-  height: 100vh; /* Set the height to cover the entire viewport height */
-  /* Additional styles if needed */
+  height: 100vh; 
+ 
+}
+
+.main-content{
+  background-color: black;
 }
 

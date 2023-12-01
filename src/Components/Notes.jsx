@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import './styles/notes.css'; // Remember to create this CSS file with the provided styles
 
 const Notes = () => {
   const [notes, setNotes] = useState([]);
@@ -37,19 +38,23 @@ const Notes = () => {
   };
 
   return (
-    <div>
+    <div className="notes-container">
       <h2>Notes</h2>
-      <div>
+      <div className="notes-buttons">
         <button onClick={addNote}>Add Note</button>
         <button onClick={handleSave}>Save Notes</button>
       </div>
       {notes.map((note) => (
-        <div key={note.id}>
+        <div className="note-item" key={note.id}>
           <textarea
             value={note.content}
             onChange={(e) => handleNoteChange(note.id, e.target.value)}
+            className="note-textarea"
+            placeholder="Enter your note here..."
           />
-          <button onClick={() => handleDeleteNote(note.id)}>Delete</button>
+          <button onClick={() => handleDeleteNote(note.id)} className="delete-button">
+            Delete
+          </button>
         </div>
       ))}
     </div>

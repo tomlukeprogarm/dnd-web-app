@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './styles/campaigns.css';
 
 const Campaigns = () => {
   const [folders, setFolders] = useState([
@@ -35,20 +36,35 @@ const Campaigns = () => {
     setFolders(updatedFolders);
   };
 
+  const handleEditFolderName = (id, newName) => {
+    const updatedFolders = folders.map((folder) => {
+      if (folder.id === id) {
+        return { ...folder, name: newName };
+      }
+      return folder;
+    });
+    setFolders(updatedFolders);
+  };
+
   return (
-    <div>
+    <div className="campaigns-container">
       <h2>Campaigns</h2>
-      <div>
-        {/* Component for creating new folders */}
-        <button onClick={() => handleFolderCreate('New Folder')}>
+      <button className='camp-folder' onClick={() => handleFolderCreate('New Folder')}>
           Create Folder
         </button>
-      </div>
       <div>
         {/* Display existing folders */}
         {folders.map((folder) => (
-          <div key={folder.id}>
+          <div className="folder-container" key={folder.id}>
             <h3>{folder.name}</h3>
+            {/* Edit folder name */}
+            <input
+              type="text"
+              value={folder.name}
+              onChange={(e) => handleEditFolderName(folder.id, e.target.value)}
+            />
+             {/* Component for creating new folders */}
+       
             {/* Component for file upload */}
             <input
               type="file"
